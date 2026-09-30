@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dollar Math · Your debt-free date, to the month</title>
+  <meta name="description" content="Free debt payoff calculator: compare snowball and avalanche, see your exact debt-free month, total interest and payoff order. Private, no sign-up.">
+  <meta property="og:title" content="Your debt-free date, to the month">
+  <meta property="og:description" content="Free calculator: snowball vs avalanche, side by side. Private, no sign-up.">
+  <meta property="og:image" content="https://exeslam.github.io/dollarmath/assets/og.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://exeslam.github.io/dollarmath/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/avatar.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="assets/avatar.png" alt="">Dollar Math</a>
+      <nav>
+        <a href="#calculator">Calculator</a>
+        <a href="#free">Free sheet</a>
+        <a href="#dashboard">Money Dashboard</a>
+        <a href="#faq">FAQ</a>
+        <a class="buy" data-link="paid" href="#dashboard">Buy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Free calculator</p>
+        <h1>Your debt-free date.<br>To the month.</h1>
+        <p class="lead">Add your debts, set what you can pay each month, and compare snowball and avalanche side by side.</p>
+        <div class="btns">
+          <a class="btn" href="#calculator">Try the calculator</a>
+          <a class="link-more" href="#free">Get the Google Sheet</a>
+        </div>
+        <p class="small">Free. Private. No sign-up. Everything runs in your browser.</p>
+      </div>
+    </section>
+
+    <section class="alt" id="calculator">
+      <div class="wrap">
+        <div class="center">
+          <p class="eyebrow">Debt-Free Date Calculator</p>
+          <h2>See when you'll be debt-free.</h2>
+        </div>
+        <div class="calc">
+          <div class="card">
+            <h3>Your debts</h3>
+            <div class="row2">
+              <label class="f">Monthly amount for all debts ($)<input id="budget" type="number" inputmode="decimal" min="0" step="10"></label>
+              <label class="f">First payment month<input id="start" type="month"></label>
+            </div>
+            <table class="debts" id="debts">
+              <colgroup><col class="c-name"><col><col><col><col class="x"></colgroup>
+              <thead><tr><th>Name</th><th>Balance ($)</th><th>APR (%)</th><th>Minimum ($)</th><th class="x"></th></tr></thead>
+              <tbody></tbody>
+            </table>
+            <button class="add" id="add" type="button">+ Add a debt</button>
+            <div class="warn" id="warn" role="status"></div>
+          </div>
+          <div class="card">
+            <h3>Your results</h3>
+            <div class="results" id="results"></div>
+            <p class="verdict" id="verdict"></p>
+            <div class="chart" id="chart"></div>
+            <div class="legend"><span style="color:#0071e3">Snowball</span><span style="color:#34c759">Avalanche</span><span style="color:#ff3b30">Minimums only</span></div>
+            <h3 style="margin-top:26px" id="orderTitle">Payoff order</h3>
+            <ol class="order" id="order"></ol>
+            <p class="small privacy-note">Your numbers never leave this page. Estimates assume a fixed APR and on-time payments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="free">
+      <div class="wrap center">
+        <p class="eyebrow">Free Google Sheet</p>
+        <h2>Take it with you.</h2>
+        <p class="lead">Get the Debt-Free Date Calculator as a Google Sheet. Plus 5 short emails on paying off debt faster. Unsubscribe anytime.</p>
+        <div class="capture" id="capture"></div>
+        <div class="pill-list"><span>Snowball vs avalanche</span><span>Up to 6 debts</span><span>Payoff order</span><span>Google Sheets</span></div>
+      </div>
+    </section>
+
+    <section class="alt" id="dashboard">
+      <div class="wrap">
+        <div class="product-head">
+          <p class="eyebrow">The Money Dashboard</p>
+          <h2>Your whole money life.<br>One spreadsheet.</h2>
+          <p class="lead">Budget, bills, paychecks, debt payoff, sinking funds and net worth. All connected, all automatic. Made for Google Sheets.</p>
+          <p class="price"><span data-price>$19</span> one-time <span>· yours forever</span></p>
+          <div class="btns" style="justify-content:center"><a class="btn" data-link="paid" href="#">Get the Money Dashboard</a></div>
+        </div>
+        <div class="shots">
+          <img src="assets/preview-dashboard.png" alt="Money Dashboard: monthly overview">
+          <img src="assets/preview-debt.png" alt="Debt payoff planner with snowball and avalanche">
+          <img src="assets/preview-budget.png" alt="Monthly budget with 50/30/20 check">
+        </div>
+        <div class="features">
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5V12l6 6"/></svg></div><h3>Monthly budget</h3><p>Plan every dollar and log spending. A 50/30/20 check turns red the moment you drift.</p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#248a3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg></div><h3>Bills that tick themselves</h3><p>Enter each bill once. Log the payment and it's marked paid. A calendar shows what's due when.</p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#5e5ce6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div><h3>Paycheck plan</h3><p>Weekly, every 2 weeks or twice a month: see which bills each paycheck covers and what's left.</p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#248a3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l6 6 3-3 7 7"/><path d="M15 16h5v-5"/></svg></div><h3>Debt payoff planner</h3><p>Snowball, avalanche or your own order, up to 10 debts. A progress bar fills as you pay.</p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ff9500" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6" fill="#ff9500"/></svg></div><h3>Sinking funds</h3><p>How much to set aside each month for every goal. Tick it when you do.</p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="4" width="7" height="7" rx="2"/><rect x="13.5" y="4" width="7" height="7" rx="2"/><rect x="3.5" y="13" width="7" height="7" rx="2"/><rect x="13.5" y="13" width="7" height="7" rx="2"/></svg></div><h3>Dashboard</h3><p>Spending, bills paid, next payday, debt-free date and net worth on one screen.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <h2 class="center">Questions</h2>
+        <div class="faq">
+          <details><summary>Snowball or avalanche: which is better?</summary><p>Avalanche (highest APR first) usually costs less interest. Snowball (smallest balance first) pays off your first debt sooner, which keeps many people going. The calculator shows both, so you can see the real difference for your numbers and pick the one you'll stick with.</p></details>
+          <details><summary>Is this financial advice?</summary><p>No. Dollar Math makes educational tools. Results are estimates that assume a fixed APR and on-time payments; your lender's numbers may differ slightly. For advice about your situation, talk to a qualified professional.</p></details>
+          <details><summary>What happens to the numbers I type?</summary><p>Nothing leaves your device. The calculator runs entirely in your browser. The spreadsheets live in your own Google Drive.</p></details>
+          <details><summary>Does it work in Excel?</summary><p>No. Both spreadsheets are made for Google Sheets, which is free with a Google account and also runs in the Google Sheets app on your phone. They use Google-only features, like checkboxes and in-cell progress bars.</p></details>
+          <details><summary>My minimum payment is lower than the interest. What then?</summary><p>Then that debt grows on minimum payments alone, and the calculator shows 30+ years. Paying anything extra each month fixes it. The calculator shows by how much.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Dollar Math. Educational tool, not financial advice.</span>
+      <span><a href="privacy.html">Privacy</a></span>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
